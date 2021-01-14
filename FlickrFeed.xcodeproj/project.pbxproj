@@ -38,6 +38,7 @@
 		2E25F82725B06B3800E7A9A6 /* FlickrFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E25F82B25B06B3800E7A9A6 /* FlickrFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrFeedTests.swift; sourceTree = "<group>"; };
 		2E25F82D25B06B3800E7A9A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E25F83E25B0B07D00E7A9A6 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		2E25F81025B06B2400E7A9A6 /* FlickrFeed */ = {
 			isa = PBXGroup;
 			children = (
+				2E25F83D25B0B05300E7A9A6 /* Configs */,
 				2E25F83925B06BCD00E7A9A6 /* Main */,
 				2E25F83725B06BAA00E7A9A6 /* Model */,
 				2E25F83825B06BB600E7A9A6 /* View */,
@@ -153,6 +155,14 @@
 				2E25F81525B06B2400E7A9A6 /* ViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2E25F83D25B0B05300E7A9A6 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				2E25F83E25B0B07D00E7A9A6 /* Debug.xcconfig */,
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +418,7 @@
 		};
 		2E25F83125B06B3800E7A9A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E25F83E25B0B07D00E7A9A6 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
