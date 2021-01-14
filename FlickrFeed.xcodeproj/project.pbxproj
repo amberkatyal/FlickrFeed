@@ -14,6 +14,7 @@
 		2E25F81E25B06B3800E7A9A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E25F81D25B06B3800E7A9A6 /* Assets.xcassets */; };
 		2E25F82125B06B3800E7A9A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E25F81F25B06B3800E7A9A6 /* LaunchScreen.storyboard */; };
 		2E25F82C25B06B3800E7A9A6 /* FlickrFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25F82B25B06B3800E7A9A6 /* FlickrFeedTests.swift */; };
+		2E25F84125B0B2EE00E7A9A6 /* PlistKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25F84025B0B2EE00E7A9A6 /* PlistKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		2E25F82B25B06B3800E7A9A6 /* FlickrFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrFeedTests.swift; sourceTree = "<group>"; };
 		2E25F82D25B06B3800E7A9A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E25F83E25B0B07D00E7A9A6 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		2E25F84025B0B2EE00E7A9A6 /* PlistKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				2E25F83825B06BB600E7A9A6 /* View */,
 				2E25F83B25B0AAA200E7A9A6 /* ViewModel */,
 				2E25F83625B06B9300E7A9A6 /* Networking */,
+				2E25F83F25B0B2AA00E7A9A6 /* Utils */,
 				2E25F83A25B06C0200E7A9A6 /* Assets */,
 			);
 			path = FlickrFeed;
@@ -163,6 +166,14 @@
 				2E25F83E25B0B07D00E7A9A6 /* Debug.xcconfig */,
 			);
 			path = Configs;
+			sourceTree = "<group>";
+		};
+		2E25F83F25B0B2AA00E7A9A6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2E25F84025B0B2EE00E7A9A6 /* PlistKeys.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 				2E25F81225B06B2400E7A9A6 /* AppDelegate.swift in Sources */,
 				2E25F81C25B06B2400E7A9A6 /* FlickrFeed.xcdatamodeld in Sources */,
 				2E25F81425B06B2400E7A9A6 /* SceneDelegate.swift in Sources */,
+				2E25F84125B0B2EE00E7A9A6 /* PlistKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
