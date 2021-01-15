@@ -64,5 +64,7 @@
 	<string>$(FLICKR_API_KEY)</string>
 	<key>FLICKR_API_SECRET</key>
 	<string>$(FLICKR_API_SECRET)</string>
+	<key>FLICKR_API_BASE_URL</key>
+	<string>$(FLICKR_API_BASE_URL)</string>
 </dict>
 </plist>

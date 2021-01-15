@@ -11,7 +11,7 @@ import Foundation
 enum PlistKeys: String {
     case FLICKR_API_KEY
     case FLICKR_API_SECRET
-    
+    case FLICKR_API_BASE_URL
 }
 
 /// To support get values in Info.plist with key
