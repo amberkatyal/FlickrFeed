@@ -25,6 +25,8 @@
 		2E25F85425B133BD00E7A9A6 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25F85325B133BD00E7A9A6 /* URLParameterEncoding.swift */; };
 		2E25F85625B1364D00E7A9A6 /* PhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25F85525B1364D00E7A9A6 /* PhotosService.swift */; };
 		2E25F85925B136A100E7A9A6 /* PhotosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25F85825B136A100E7A9A6 /* PhotosAPI.swift */; };
+		2E25F85B25B150C900E7A9A6 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25F85A25B150C900E7A9A6 /* FlickrPhoto.swift */; };
+		2E25F85D25B1517D00E7A9A6 /* FlickrPhotoSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25F85C25B1517D00E7A9A6 /* FlickrPhotoSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		2E25F85325B133BD00E7A9A6 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
 		2E25F85525B1364D00E7A9A6 /* PhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosService.swift; sourceTree = "<group>"; };
 		2E25F85825B136A100E7A9A6 /* PhotosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPI.swift; sourceTree = "<group>"; };
+		2E25F85A25B150C900E7A9A6 /* FlickrPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
+		2E25F85C25B1517D00E7A9A6 /* FlickrPhotoSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotoSize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				2E25F81A25B06B2400E7A9A6 /* FlickrFeed.xcdatamodeld */,
+				2E25F85A25B150C900E7A9A6 /* FlickrPhoto.swift */,
+				2E25F85C25B1517D00E7A9A6 /* FlickrPhotoSize.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -339,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E25F81625B06B2400E7A9A6 /* ViewController.swift in Sources */,
+				2E25F85B25B150C900E7A9A6 /* FlickrPhoto.swift in Sources */,
 				2E25F81225B06B2400E7A9A6 /* AppDelegate.swift in Sources */,
 				2E25F85425B133BD00E7A9A6 /* URLParameterEncoding.swift in Sources */,
 				2E25F84425B0B65200E7A9A6 /* EndpointType.swift in Sources */,
@@ -350,6 +357,7 @@
 				2E25F85225B1339800E7A9A6 /* ParameterEncoding.swift in Sources */,
 				2E25F85025B1336900E7A9A6 /* JSONParameterEncoding.swift in Sources */,
 				2E25F81425B06B2400E7A9A6 /* SceneDelegate.swift in Sources */,
+				2E25F85D25B1517D00E7A9A6 /* FlickrPhotoSize.swift in Sources */,
 				2E25F84625B0B68100E7A9A6 /* HTTPTask.swift in Sources */,
 				2E25F84D25B1331000E7A9A6 /* WebService.swift in Sources */,
 				2E25F84125B0B2EE00E7A9A6 /* PlistKeys.swift in Sources */,
