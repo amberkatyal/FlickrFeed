@@ -23,6 +23,8 @@
 		2E25F85025B1336900E7A9A6 /* JSONParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25F84F25B1336900E7A9A6 /* JSONParameterEncoding.swift */; };
 		2E25F85225B1339800E7A9A6 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25F85125B1339800E7A9A6 /* ParameterEncoding.swift */; };
 		2E25F85425B133BD00E7A9A6 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25F85325B133BD00E7A9A6 /* URLParameterEncoding.swift */; };
+		2E25F85625B1364D00E7A9A6 /* PhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25F85525B1364D00E7A9A6 /* PhotosService.swift */; };
+		2E25F85925B136A100E7A9A6 /* PhotosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25F85825B136A100E7A9A6 /* PhotosAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		2E25F84F25B1336900E7A9A6 /* JSONParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoding.swift; sourceTree = "<group>"; };
 		2E25F85125B1339800E7A9A6 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		2E25F85325B133BD00E7A9A6 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
+		2E25F85525B1364D00E7A9A6 /* PhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosService.swift; sourceTree = "<group>"; };
+		2E25F85825B136A100E7A9A6 /* PhotosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 		2E25F83625B06B9300E7A9A6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				2E25F85725B1368B00E7A9A6 /* Endpoint */,
 				2E25F84E25B1334D00E7A9A6 /* Encoding */,
 				2E25F84B25B132D200E7A9A6 /* Service */,
 				2E25F84225B0B5F700E7A9A6 /* Request */,
@@ -210,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				2E25F84C25B1331000E7A9A6 /* WebService.swift */,
+				2E25F85525B1364D00E7A9A6 /* PhotosService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -222,6 +228,14 @@
 				2E25F85325B133BD00E7A9A6 /* URLParameterEncoding.swift */,
 			);
 			path = Encoding;
+			sourceTree = "<group>";
+		};
+		2E25F85725B1368B00E7A9A6 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				2E25F85825B136A100E7A9A6 /* PhotosAPI.swift */,
+			);
+			path = Endpoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +342,8 @@
 				2E25F81225B06B2400E7A9A6 /* AppDelegate.swift in Sources */,
 				2E25F85425B133BD00E7A9A6 /* URLParameterEncoding.swift in Sources */,
 				2E25F84425B0B65200E7A9A6 /* EndpointType.swift in Sources */,
+				2E25F85925B136A100E7A9A6 /* PhotosAPI.swift in Sources */,
+				2E25F85625B1364D00E7A9A6 /* PhotosService.swift in Sources */,
 				2E25F81C25B06B2400E7A9A6 /* FlickrFeed.xcdatamodeld in Sources */,
 				2E25F84A25B1326E00E7A9A6 /* Router.swift in Sources */,
 				2E25F84825B0B6E400E7A9A6 /* HTTPMethod.swift in Sources */,

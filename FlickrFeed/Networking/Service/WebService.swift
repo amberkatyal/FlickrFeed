@@ -10,6 +10,11 @@ import Foundation
 
 enum NetworkResponse:String, Error {
     case success
+    case invalidUserID = "invalid user id was passed"
+    case popularDisabled = "popular photos disabled by user"
+    case serviceUnavailable = "service currently unavailable"
+    case methodNotFound = "requested method was not found"
+    case badURL = "bad url found"
     case authenticationError = "You need to be authenticated first."
     case badRequest = "Bad request"
     case outdated = "The url you requested is outdated."
@@ -51,6 +56,11 @@ extension WebService {
     fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> NetworkResponse? {
         debugPrint(response.statusCode)
         switch response.statusCode {
+        case 1: return .invalidUserID
+        case 2: return .popularDisabled
+        case 105: return .serviceUnavailable
+        case 112: return .methodNotFound
+        case 116: return .badURL
         case 200...299: return nil
         case 401...500: return .authenticationError
         case 501...599: return .badRequest
