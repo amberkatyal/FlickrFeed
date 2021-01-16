@@ -8,6 +8,7 @@
 
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
+#include "Pods/Target Support Files/Pods-FlickrFeed/Pods-FlickrFeed.debug.xcconfig"
 
 FLICKR_API_KEY = d1179b41a3b2639339e59f6591407667
 FLICKR_API_SECRET = "a6a2a700741c8740"
