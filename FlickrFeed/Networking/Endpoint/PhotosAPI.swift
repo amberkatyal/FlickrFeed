@@ -37,7 +37,7 @@ extension PhotosAPI: EndPointType {
             var params = urlParams
             params["per_page"] = batchSize
             params["page"] = page
-            params["user_id"] = "152202925@N07"
+            params["user_id"] = "66956608@N06"
             params["method"] = "flickr.photos.getPopular"
             return .requestParameters(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: params)
         }

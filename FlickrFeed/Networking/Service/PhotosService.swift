@@ -12,7 +12,7 @@ struct PhotosService: WebService {
     
     let router = Router<PhotosAPI>()
     
-    func fetchPopularPhotos(batchSize: Int = 15, page: Int = 1) {
+    func fetchPopularPhotos(batchSize: Int = 15, page: Int = 2) {
         router.request(.getPopular(batchSize: batchSize, page: page)) { (data, response, error) in
             self.parseAPIResponse(data: data, response: response, error: error) { (_) in
                 

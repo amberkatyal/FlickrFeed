@@ -27,6 +27,15 @@
 		2E25F85925B136A100E7A9A6 /* PhotosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25F85825B136A100E7A9A6 /* PhotosAPI.swift */; };
 		2E25F85B25B150C900E7A9A6 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25F85A25B150C900E7A9A6 /* FlickrPhoto.swift */; };
 		2E25F85D25B1517D00E7A9A6 /* FlickrPhotoSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25F85C25B1517D00E7A9A6 /* FlickrPhotoSize.swift */; };
+		2E7C02B025B285E300059402 /* HMAC-SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C02AF25B285E300059402 /* HMAC-SHA1.swift */; };
+		2E7C02B325B2896200059402 /* OAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C02B225B2896200059402 /* OAuthService.swift */; };
+		2E7C02B525B2956600059402 /* OAuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C02B425B2956600059402 /* OAuthAPI.swift */; };
+		2E7C02B825B2B36100059402 /* Int+HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C02B725B2B36100059402 /* Int+HMAC.swift */; };
+		2E7C02BA25B2B37B00059402 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C02B925B2B37B00059402 /* SHA1.swift */; };
+		2E7C02BC25B2B3AA00059402 /* Collection+HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C02BB25B2B3AA00059402 /* Collection+HMAC.swift */; };
+		2E80BF0B25B1C173009E92AE /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80BF0A25B1C173009E92AE /* AuthenticationViewController.swift */; };
+		2E80BF0E25B1C1C2009E92AE /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80BF0D25B1C1C2009E92AE /* AuthenticationView.swift */; };
+		2E80BF1025B1C254009E92AE /* HasCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80BF0F25B1C254009E92AE /* HasCustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +74,15 @@
 		2E25F85825B136A100E7A9A6 /* PhotosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPI.swift; sourceTree = "<group>"; };
 		2E25F85A25B150C900E7A9A6 /* FlickrPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
 		2E25F85C25B1517D00E7A9A6 /* FlickrPhotoSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotoSize.swift; sourceTree = "<group>"; };
+		2E7C02AF25B285E300059402 /* HMAC-SHA1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HMAC-SHA1.swift"; sourceTree = "<group>"; };
+		2E7C02B225B2896200059402 /* OAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthService.swift; sourceTree = "<group>"; };
+		2E7C02B425B2956600059402 /* OAuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthAPI.swift; sourceTree = "<group>"; };
+		2E7C02B725B2B36100059402 /* Int+HMAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+HMAC.swift"; sourceTree = "<group>"; };
+		2E7C02B925B2B37B00059402 /* SHA1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
+		2E7C02BB25B2B3AA00059402 /* Collection+HMAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+HMAC.swift"; sourceTree = "<group>"; };
+		2E80BF0A25B1C173009E92AE /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		2E80BF0D25B1C1C2009E92AE /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		2E80BF0F25B1C254009E92AE /* HasCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +109,7 @@
 				2E25F81025B06B2400E7A9A6 /* FlickrFeed */,
 				2E25F82A25B06B3800E7A9A6 /* FlickrFeedTests */,
 				2E25F80F25B06B2400E7A9A6 /* Products */,
+				A9FB69A5B5BE9EBC0CA190A3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +149,7 @@
 		2E25F83625B06B9300E7A9A6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				2E7C02B125B2894700059402 /* OAuth */,
 				2E25F85725B1368B00E7A9A6 /* Endpoint */,
 				2E25F84E25B1334D00E7A9A6 /* Encoding */,
 				2E25F84B25B132D200E7A9A6 /* Service */,
@@ -151,6 +171,7 @@
 		2E25F83825B06BB600E7A9A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2E80BF0C25B1C1A3009E92AE /* Views */,
 				2E25F83C25B0AECB00E7A9A6 /* ViewController */,
 			);
 			path = View;
@@ -186,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				2E25F81525B06B2400E7A9A6 /* ViewController.swift */,
+				2E80BF0A25B1C173009E92AE /* AuthenticationViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -201,7 +223,9 @@
 		2E25F83F25B0B2AA00E7A9A6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2E7C02B625B2B34500059402 /* HMAC */,
 				2E25F84025B0B2EE00E7A9A6 /* PlistKeys.swift */,
+				2E80BF0F25B1C254009E92AE /* HasCustomView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -240,8 +264,43 @@
 			isa = PBXGroup;
 			children = (
 				2E25F85825B136A100E7A9A6 /* PhotosAPI.swift */,
+				2E7C02B425B2956600059402 /* OAuthAPI.swift */,
 			);
 			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		2E7C02B125B2894700059402 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				2E7C02B225B2896200059402 /* OAuthService.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		2E7C02B625B2B34500059402 /* HMAC */ = {
+			isa = PBXGroup;
+			children = (
+				2E7C02AF25B285E300059402 /* HMAC-SHA1.swift */,
+				2E7C02B725B2B36100059402 /* Int+HMAC.swift */,
+				2E7C02B925B2B37B00059402 /* SHA1.swift */,
+				2E7C02BB25B2B3AA00059402 /* Collection+HMAC.swift */,
+			);
+			path = HMAC;
+			sourceTree = "<group>";
+		};
+		2E80BF0C25B1C1A3009E92AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E80BF0D25B1C1C2009E92AE /* AuthenticationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A9FB69A5B5BE9EBC0CA190A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,17 +403,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E7C02BA25B2B37B00059402 /* SHA1.swift in Sources */,
 				2E25F81625B06B2400E7A9A6 /* ViewController.swift in Sources */,
 				2E25F85B25B150C900E7A9A6 /* FlickrPhoto.swift in Sources */,
 				2E25F81225B06B2400E7A9A6 /* AppDelegate.swift in Sources */,
+				2E7C02BC25B2B3AA00059402 /* Collection+HMAC.swift in Sources */,
 				2E25F85425B133BD00E7A9A6 /* URLParameterEncoding.swift in Sources */,
+				2E80BF0B25B1C173009E92AE /* AuthenticationViewController.swift in Sources */,
+				2E7C02B025B285E300059402 /* HMAC-SHA1.swift in Sources */,
 				2E25F84425B0B65200E7A9A6 /* EndpointType.swift in Sources */,
 				2E25F85925B136A100E7A9A6 /* PhotosAPI.swift in Sources */,
+				2E7C02B825B2B36100059402 /* Int+HMAC.swift in Sources */,
 				2E25F85625B1364D00E7A9A6 /* PhotosService.swift in Sources */,
+				2E80BF1025B1C254009E92AE /* HasCustomView.swift in Sources */,
+				2E7C02B525B2956600059402 /* OAuthAPI.swift in Sources */,
 				2E25F81C25B06B2400E7A9A6 /* FlickrFeed.xcdatamodeld in Sources */,
 				2E25F84A25B1326E00E7A9A6 /* Router.swift in Sources */,
 				2E25F84825B0B6E400E7A9A6 /* HTTPMethod.swift in Sources */,
 				2E25F85225B1339800E7A9A6 /* ParameterEncoding.swift in Sources */,
+				2E80BF0E25B1C1C2009E92AE /* AuthenticationView.swift in Sources */,
+				2E7C02B325B2896200059402 /* OAuthService.swift in Sources */,
 				2E25F85025B1336900E7A9A6 /* JSONParameterEncoding.swift in Sources */,
 				2E25F81425B06B2400E7A9A6 /* SceneDelegate.swift in Sources */,
 				2E25F85D25B1517D00E7A9A6 /* FlickrPhotoSize.swift in Sources */,
