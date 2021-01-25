@@ -44,6 +44,8 @@ final class PopularViewModel {
     
     private func updateDataSource(items: [FlickrPhoto]) {
         self.dataSource.append(dataSource: items)
-        self.reloadData?()
+        DispatchQueue.main.async {
+            self.reloadData?()
+        }
     }
 }
