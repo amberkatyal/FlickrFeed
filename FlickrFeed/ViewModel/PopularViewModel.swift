@@ -10,6 +10,7 @@ import Foundation
 
 final class PopularViewModel {
 
+    var reloadData: (()->Void)? = nil
     private let photosService: PhotosService
 
     private let dataSource: CollectionViewViewDataSource<FlickrPhoto,PopularCollectionViewCell>
@@ -42,6 +43,7 @@ final class PopularViewModel {
     }
     
     private func updateDataSource(items: [FlickrPhoto]) {
-        
+        self.dataSource.append(dataSource: items)
+        self.reloadData?()
     }
 }

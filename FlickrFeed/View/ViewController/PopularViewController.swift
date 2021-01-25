@@ -14,7 +14,6 @@ class PopularViewController: UIViewController, HasCustomView {
     
     // MARK: - Properties
     private let viewModel: PopularViewModel
-//    
     
     // MARK: - Init
 
@@ -35,6 +34,9 @@ class PopularViewController: UIViewController, HasCustomView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.reloadData = { [weak self] in
+            self?.thisView.collectionView.reloadData()
+        }
         viewModel.load()
     }
 }
