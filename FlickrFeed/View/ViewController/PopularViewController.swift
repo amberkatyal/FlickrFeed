@@ -8,13 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController, HasCustomView {
-
+class PopularViewController: UIViewController, HasCustomView {
+    
     typealias CustomView = PopularView
     
-    // MARK: - Init
+    // MARK: - Properties
+    private let viewModel: PopularViewModel
+//    
     
-    init() {
+    // MARK: - Init
+
+    init(viewModel: PopularViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -30,26 +35,16 @@ class ViewController: UIViewController, HasCustomView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        thisView.tableView.dataSource = self
+        viewModel.load()
     }
-
 }
 
-extension ViewController: UITableViewDataSource {
+extension PopularViewController: UICollectionViewDelegateFlowLayout {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: PopularTableViewCell.id, for: indexPath) as? PopularTableViewCell else {
-            return UITableViewCell()
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard collectionView.isDragging || collectionView.isTracking else { return }
+        if indexPath.item == collectionView.numberOfItems(inSection: 0)-1 {
+            viewModel.nextPage()
         }
-        return cell
     }
 }
-

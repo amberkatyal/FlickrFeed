@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         self.window = UIWindow(windowScene: windowScene)
-        let vc = AuthenticationViewController()
+        let vc = PopularViewController(viewModel: PopularViewModel())
         let nc = UINavigationController(rootViewController: vc)
         window?.rootViewController = nc
         window?.makeKeyAndVisible()

@@ -11,10 +11,10 @@ import UIKit
 final class PopularView: UIView {
     
     // MARK: - Views
-    let tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
+    let collectionView: UICollectionView = {
+        let collectionView = UICollectionView()
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
     }()
     // MARK: - Init
     override init(frame: CGRect) {
