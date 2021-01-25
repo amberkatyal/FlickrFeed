@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum FlickrPhotoSize: String {
+public enum FlickrPhotoSize: String {
     case thumbnailShort     = "s"
     case thumbnailCropped   = "q"
     case thumbnail          = "t"

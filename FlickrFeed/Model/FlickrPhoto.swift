@@ -8,9 +8,13 @@
 
 import Foundation
 
-struct FlickrPhoto {
-    let id: UUID
-    let title: String?
-    let secret: UUID
-    let serverID: UUID
+public struct FlickrPhoto: Decodable {
+    public let id: String
+    public let title: String
+    public let secret: String
+    public let server: String
+    
+    public var imageURLString: String {
+        return "https://live.staticflickr.com/\(server)/\(id)_\(secret).jpg"
+    }
 }
