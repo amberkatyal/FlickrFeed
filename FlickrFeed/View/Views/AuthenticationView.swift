@@ -29,10 +29,9 @@ final class AuthenticationView: UIView {
     
     // MARK: - Setup
     private func setup() {
+        backgroundColor = .systemBackground
         addSubview(authButton)
-        NSLayoutConstraint.activate([
-        authButton.centerYAnchor.constraint(equalTo: centerYAnchor),
-        authButton.centerXAnchor.constraint(equalTo: centerXAnchor)])
+        authButton.center(in: self)
         
     }
 }

@@ -28,13 +28,9 @@ final class PopularView: UIView {
     
     // MARK: - Setup
     private func setup() {
-        addSubview(tableView)
-        NSLayoutConstraint.activate([
-            tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
-        ])
-        
+        backgroundColor = .systemBackground
+        addSubview(collectionView)
+        collectionView.constrainEdges(toLayoutGuide: self.safeAreaLayoutGuide)
+        collectionView.registerClass(PopularCollectionViewCell.self)
     }
 }

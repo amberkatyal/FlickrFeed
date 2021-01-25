@@ -18,9 +18,9 @@ final class OAuthService {
     private let signatureMethod = "HMAC-SHA1"
     private let oauthVersion = "1.0"
     
-    init(key: String = infoForKey(.FLICKR_API_KEY), secret: String = infoForKey(.FLICKR_API_SECRET), baseURL: String = infoForKey(.FLICKR_OAUTH_BASE_URL), callbackURL: String = "https://www.example.com") {
-        self.consumerKey = "d1179b41a3b2639339e59f6591407667"
-        self.consumerSecret = "a6a2a700741c8740"
+    init(key: String = infoForKey(.FLICKR_API_KEY), secret: String = infoForKey(.FLICKR_API_SECRET), baseURL: String = infoForKey(.FLICKR_OAUTH_BASE_URL), callbackURL: String = "flickrfeed://oauth-callback/flickr") {
+        self.consumerKey = key
+        self.consumerSecret = secret
         self.baseURL = baseURL
         self.callbackURL = callbackURL
         requestToken()
@@ -62,8 +62,8 @@ final class OAuthService {
         let key = "\(consumerSecret)&" // no token secret
         let signature = HMAC.sha1(key: key.data(using: .utf8)!, message: text.data(using: .utf8)!)!
         let signatureString = signature.base64EncodedString()
-        // Issue in Postman, OAuthSwift etc: (RFC5849 oauth1)
-        // While the encoding rules specified in this
+//        Issue in Postman, OAuthSwift etc: (RFC5849 oauth1)
+//        While the encoding rules specified in this
 //        specification for the purpose of constructing the signature base
 //        string exclude the use of a "+" character (ASCII code 43) to
 //        represent an encoded space character (ASCII code 32), this practice

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PopularTableViewCell: UITableViewCell {
+class PopularTableViewCell: UITableViewCell, ReusableView {
 
     // MARK: - Views
     let popularImageView: UIImageView = {
@@ -17,9 +17,7 @@ class PopularTableViewCell: UITableViewCell {
         imgView.contentMode = .scaleAspectFill
         return imgView
     }()
-    
-    static let id = String(describing: PopularTableViewCell.self)
-    
+
     // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -33,11 +31,6 @@ class PopularTableViewCell: UITableViewCell {
     // MARK: - Setup
     private func setup() {
         contentView.addSubview(popularImageView)
-        NSLayoutConstraint.activate([
-            popularImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            popularImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            popularImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            popularImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-        ])
+        popularImageView.constrainEdges(to: contentView)
     }
 }
