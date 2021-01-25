@@ -20,16 +20,19 @@ class PagingGenerator<T>: AsyncGeneratorType {
         
     var page: Int
     let limit: Int
+    var total: Int
     
     init(page: Int = 1, limit: Int = 25) {
         self.page = page
         self.limit = limit
+        self.total = 0
     }
     
     func next(fetchNextBatch: Fetch, onFinish: ((Page) -> Void)? = nil) {
-        fetchNextBatch(page, limit) { [unowned self] (items) in
-            onFinish?(items)
-            self.page = items.count
+        fetchNextBatch(page, limit) { [unowned self] (page) in
+            onFinish?(page)
+            self.page += 1
+            self.total += page.count
         }
     }
 }

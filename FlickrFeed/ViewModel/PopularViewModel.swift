@@ -15,6 +15,8 @@ final class PopularViewModel {
 
     let dataSource: CollectionViewViewDataSource<FlickrPhoto,PopularCollectionViewCell>
     private var paging = PagingGenerator<FlickrPhoto>(page: 1, limit: 25)
+
+    var columns = 2
     
     init() {
         self.photosService = PhotosService()
@@ -25,6 +27,10 @@ final class PopularViewModel {
 
     func load() {
         nextPage()
+    }
+    
+    func getTotal() -> Int {
+        return paging.total
     }
     
     func nextPage() {

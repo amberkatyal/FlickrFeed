@@ -40,20 +40,34 @@ class PopularViewController: UIViewController, HasCustomView {
         thisView.collectionView.dataSource = viewModel.dataSource
         thisView.collectionView.delegate = self
         viewModel.load()
+        thisView.segmentControl.addTarget(self, action: #selector(didTapSegment(_:)), for: .valueChanged)
+    }
+    
+    // MARK: - Actions
+    @objc func didTapSegment(_ segment: UISegmentedControl) {
+        if let columnsString = segment.titleForSegment(at: segment.selectedSegmentIndex), let columns = Int(columnsString) {
+            viewModel.columns = columns
+            thisView.collectionView.setCollectionViewLayout(thisView.collectionViewLayout, animated: true)
+        }
     }
 }
 
 extension PopularViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        guard collectionView.isDragging || collectionView.isTracking else { return }
-        if indexPath.item == collectionView.numberOfItems(inSection: 0)-1 {
+        let offsetY = collectionView.contentOffset.y
+        let contentHeight = collectionView.contentSize.height
+        let offset = offsetY > contentHeight - collectionView.frame.size.height
+        let userScroll = (collectionView.isDragging && collectionView.isDecelerating) || collectionView.isTracking
+        let lastItem = indexPath.item == collectionView.numberOfItems(inSection: 0)-1
+        if offset || (lastItem && userScroll) {
             viewModel.nextPage()
         }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = thisView.frame.width/2
+        let width = thisView.frame.width/CGFloat(viewModel.columns)
         return CGSize(width: width, height: width)
     }
     
