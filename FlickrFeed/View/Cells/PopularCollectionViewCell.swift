@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PopularCollectionViewCell: UICollectionViewCell, ReusableView {
 
@@ -32,5 +33,9 @@ class PopularCollectionViewCell: UICollectionViewCell, ReusableView {
     private func setup() {
         contentView.addSubview(popularImageView)
         popularImageView.constrainEdges(to: contentView)
+    }
+    
+    func setImage(from url: URL) {
+        popularImageView.kf.setImage(with: url)
     }
 }

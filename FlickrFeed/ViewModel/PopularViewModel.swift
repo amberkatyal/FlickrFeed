@@ -17,8 +17,8 @@ final class PopularViewModel {
     
     init() {
         self.photosService = PhotosService()
-        self.dataSource = CollectionViewViewDataSource(models: [], cellIdentifier: PopularCollectionViewCell.identifier) { (_, _) in
-            
+        self.dataSource = CollectionViewViewDataSource<FlickrPhoto, PopularCollectionViewCell>(models: [], cellIdentifier: PopularCollectionViewCell.identifier) { (model, cell) in
+            cell.setImage(from: model.imageURL)
         }
     }
 
