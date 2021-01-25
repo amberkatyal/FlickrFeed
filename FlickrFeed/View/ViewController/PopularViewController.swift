@@ -37,6 +37,8 @@ class PopularViewController: UIViewController, HasCustomView {
         viewModel.reloadData = { [weak self] in
             self?.thisView.collectionView.reloadData()
         }
+        thisView.collectionView.dataSource = viewModel.dataSource
+        thisView.collectionView.delegate = self
         viewModel.load()
     }
 }
@@ -51,7 +53,8 @@ extension PopularViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width/2
+        let width = thisView.frame.width/2
         return CGSize(width: width, height: width)
     }
+    
 }

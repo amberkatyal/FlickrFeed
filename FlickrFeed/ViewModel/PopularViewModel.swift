@@ -13,7 +13,7 @@ final class PopularViewModel {
     var reloadData: (()->Void)? = nil
     private let photosService: PhotosService
 
-    private let dataSource: CollectionViewViewDataSource<FlickrPhoto,PopularCollectionViewCell>
+    let dataSource: CollectionViewViewDataSource<FlickrPhoto,PopularCollectionViewCell>
     private var paging = PagingGenerator<FlickrPhoto>(page: 1, limit: 25)
     
     init() {

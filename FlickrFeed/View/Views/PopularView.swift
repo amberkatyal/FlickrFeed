@@ -12,7 +12,12 @@ final class PopularView: UIView {
     
     // MARK: - Views
     let collectionView: UICollectionView = {
-        let collectionView = UICollectionView()
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = .zero
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .systemBackground
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()

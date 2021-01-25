@@ -33,6 +33,7 @@ class PopularCollectionViewCell: UICollectionViewCell, ReusableView {
     private func setup() {
         contentView.addSubview(popularImageView)
         popularImageView.constrainEdges(to: contentView)
+        contentView.layer.masksToBounds = true
     }
     
     func setImage(from url: URL) {
